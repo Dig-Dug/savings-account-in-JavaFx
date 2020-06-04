@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BorderPane>
+
+<!-- imports -->
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.ImageView?>
+
+
+<!-- pane composition -->
+  <BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="main-pane">
+	<top>
+		<HBox styleClass="top-pane">
+			<TextField styleClass="account-input" promptText="enter account number" />
+			<Button styleClass="top-button" text="save">
+				<tooltip><Tooltip text="save account to database" /></tooltip>
+			</Button>
+			<Button styleClass="top-button" text="load">
+				<tooltip><Tooltip text="load account from database" /></tooltip>
+			</Button>
+		</HBox>
+	</top>
+	<left>
+		<VBox styleClass="left-pane">
+			<TextField styleClass="operand-input" HBox.hgrow="ALWAYS" promptText="enter operand" />
+			<Button styleClass="right-button" text="deposit">
+				<tooltip><Tooltip text="deposit money" /></tooltip>
+			</Button>
+			<Button styleClass="right-button" text="withdraw">
+				<tooltip><Tooltip text="withdraw money" /></tooltip>
+			</Button>
+			<Button styleClass="right-button" text="interest">
+				<tooltip><Tooltip text="deposit yearly interest" /></tooltip>
+			</Button>
+			<Button styleClass="right-button" text="predict">
+				<tooltip><Tooltip text="predict daily interest" /></tooltip>
+			</Button>	
+			<Button styleClass="right-button" text="display">
+				<tooltip><Tooltip text="display account details" /></tooltip>
+			</Button>
+			<ImageView fitWidth="90" fitHeight="90">
+				<Image url="de/cbw/jav/account/fx/main.png" />
+			</ImageView>
+		</VBox>
+	</left>
+	<center>
+		<TextArea styleClass="data-output" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" editable="false" />
+	</center>
+	<bottom>
+		<Label styleClass="error-output" />
+	</bottom>
+
+ </BorderPane> 
